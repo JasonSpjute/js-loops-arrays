@@ -69,8 +69,8 @@ let flights = [{
 
 
 function flightCost(destination, firstClass) {
-    //***hint: use the find method***
-
+    let flight = flights.find(f=> f.to.toLowerCase() == destination.toLowerCase())
+    return firstClass ? flight.prices.firstClass : flight.prices.standard
 }
 
 
