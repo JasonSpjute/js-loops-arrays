@@ -23,6 +23,15 @@ function letterChecker(str) {
 // output: true (because 4+3)
 
 function sumEqualsTarget(arr, target) {
+    let pairs = {}
+    for(let i = 0; i < arr.length; i++){
+        let num = arr[i]
+        if(pairs[num]){
+            return true
+        }
+        pairs[target - num] = true
+    }
+    return false
 }
 
 
